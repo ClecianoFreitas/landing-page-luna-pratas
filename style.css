@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 95%;
+    /*Isso vai ajudar a responsividade*/
+    overflow-x: hidden;
+    /*Vai ter a barra de rolagem vertical mas não horizontal*/
+    background-color: #1f1e1f;
+}
+
+/*Menu*/
+.content {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d88a81;
+    position: fixed;
+    /*Deixa a barra de rolagem fixa, mesmo que desça*/
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.content .list-menu {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .list-menu li a {
+    padding: 3rem 1rem 1.4rem 1rem;
+    color: #32245E;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 200ms ease-in;
+}
+
+.content .list-menu li a:hover {
+    background-color: #3333;
+    border-bottom: 4px solid #32245E;
+    opacity: 0.9;
+}
+
+/*first Section*/
+
+.first-section {
+    background-image: linear-gradient(rgba(111, 114, 112, 0.1), rgba(111, 114, 112, 0.1)), url(img/modelo-demonstrando-brincos-e-anel_7502-7042.avif);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.first-section .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8rem;
+}
+
+.first-section h1 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #d88a81;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.container-h2 {
+    width: 48vh;
+    word-break: inherit;
+}
+
+.first-section h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    color: #32245E;
+}
+
+
+.btn button {
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    background-color: #d88a81;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 2.5rem;
+    transition: all 400ms ease-in;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn button:hover {
+    border: 1px solid #f2f2f2;
+    opacity: 0.8;
+}
+
+.btn {
+    width: 480px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Sobre nós*/
+
+.sobre-nos {
+    background-color: #32245E;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(216, 138, 129, 1));
+    width: 100%;
+    padding-bottom: 5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-nos img {
+    width: 550px;
+    height: 400px;
+    margin-top: 5rem;
+    margin-left: 10rem;
+    /* border: 2px solid ; */
+    box-shadow: -10px 5px 50px #3c3c3c;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.content-sobre h2 {
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.sobre-nos p {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 500px;
+    line-height: 1.5rem;
+}
+
+/*Produtos*/
+
+.produtos {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(50, 36, 94, 0.9);
+    padding-top: 4rem;
+}
+
+.produtos h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #e6e6e6;
+}
+
+.itens-produtos {
+    width: 90%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    /*posociona os elemento de forma bidimensional*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+    /*dizemos o tamanho de cada uma das colunas. Repete as colunas, que automanticamente ficam organizadas em tela, onde o tamanho minimo de cada um dos cards é 250px e o maximo 550px*/
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.itens-produtos div {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-top: 2rem;
+}
+
+.itens-produtos .info {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.itens-produtos .info h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.itens-produtos .info p {
+    font-family: 'Quicksand', sans-serif;
+    color: #000;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.itens-produtos .info p span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #008000;
+    margin-top: 0.8rem;
+}
+
+.itens-produtos img {
+    width: 300px;
+    height: 200px;
+    margin-left: 3rem;
+    border-radius: 10px;
+}
+
+.itens-produtos .info .comprar {
+    width: 200px;
+    height: 35px;
+    margin-top: 0.5rem;
+    background-color: #d88a81;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #32245E;
+    transition: all 200ms ease-in;
+}
+
+.itens-produtos .info .comprar:hover {
+    color: #fff;
+    opacity: 0.8;
+}
+
+/*Contatos*/
+
+.contatos {
+    border-top: 2px solid #fff;
+    width: 100%;
+    background-color: rgba(50, 36, 94, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 1rem;
+}
+
+.contatos h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contatos-secao {
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1rem;
+}
+
+.contato-secao i {
+    margin-right: 1rem;
+}
+
+.link {
+    color: #fff;
+}
+
+.contato-secao div {
+    cursor: pointer;
+}
+
+.contato-secao div:hover {
+    opacity: 0.8;
+}
+
+footer {
+    height: 25px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .main {
+        display: block;
+    }
+
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 12%;
+        padding-left: 9rem;
+        padding-top: 0.6rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .first-section .conteudo-principal {
+        margin-left: 4rem;
+    }
+
+
+    .sobre-nos img {
+        width: 450px;
+        height: 300px;
+        margin-top: 3rem;
+        margin-left: 1.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 75%;
+    }
+
+    .first-section .conteudo-principal {
+        margin-left: 1rem;
+    }
+
+    .sobre-nos img {
+        margin-left: 1.9rem;
+    }
+
+    .itens-produtos {
+        width: 80%;
+        gap: 8rem;
+        padding-right: 3rem;
+    }
+
+    .content .list-menu {
+        padding-top: 0.8rem;
+    }
+
+    .btn button {
+        width: 150px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 480px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .produtos {
+        padding-top: 2rem;
+    }
+
+    .produtos h2 {
+        margin-bottom: 2rem;
+    }
+
+    .itens-produtos {
+        grid-template-columns: repeat(2, minmax(50px, 350px));
+        width: 90%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        gap: 6rem;
+    }
+
+    .itens-produtos div {
+        width: 350px;
+        margin-top: -20px;
+    }
+
+    .itens-produtos img {
+        margin-left: 2rem;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .first-section .conteudo-principal {}
+
+    .produtos h2 {
+        margin-left: -2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 45%;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 40px;
+    }
+
+    .content .list-menu {
+        display: none;
+    }
+
+    .one,
+    .two,
+    .three {
+        width: 80%;
+        height: 2px;
+        background-color: white;
+        margin: 6px auto;
+        transition-duration: 0.5s;
+    }
+
+    .menu-toggle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .content.on {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(30, 31, 30, 0.8);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content.on .logo {
+        display: none;
+    }
+
+    .content.on .menu-toggle {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .content.on .list-menu {
+        display: block;
+    }
+
+    .content.on .list-menu li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content.on .list-menu li a {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .content.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .content.on .menu-toggle .one {
+        transform: rotate(45deg) translate(5px, 8px);
+    }
+
+    .content.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(4px, -6px);
+    }
+
+    .first-section .conteudo-principal {
+        margin-left: -2rem;
+    }
+
+    .first-section h1 {
+        font-size: 6rem;
+    }
+    
+    .first-section h2 {
+        font-size: 2rem;
+        text-align: center;
+    }    
+    
+    .btn button {
+        width: 150px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 450px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .sobre-nos img {
+        width: 450px;
+        height: 300px;
+        margin-left: 3rem;
+    }
+
+    .content-sobre h2 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .sobre-nos p {
+        font-size: 1.8rem;
+        width: 500px;
+        line-height: 2rem;
+    }
+
+    .produtos h2 {
+        font-size: 4rem;
+    }
+
+    .itens-produtos div {
+        width: 300px;
+        margin-left: 0rem;
+    }
+
+    .itens-produtos .info h3 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .itens-produtos .info p {
+        font-size: 2rem;
+    }
+
+    .itens-produtos .info p span{
+        font-size: 2.5rem;
+    }
+    .itens-produtos img {
+        width: 250px;
+        height: 150px;
+        margin-left: 3rem;
+        border-radius: 10px;
+    }
+
+    .itens-produtos {
+        grid-template-columns: repeat(2, minmax(50px, 350px));
+    }
+
+    .contatos-secao{
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .contatos-secao div{
+        margin: 1rem;
+    }
+
+    @media(max-width: 600px){
+        .conteudo-principal h1{
+            width: 500px;
+            text-align: center;
+            font-size: 4rem;
+        }
+
+        .conteudo-principal h2{
+            font-size: 2rem;
+        }
+
+        .itens-produtos{
+            grid-template-columns: repeat(auto-fit, minmax(50px, 350px));
+        }
+
+        .sobre-nos img{
+            width: 400px;
+            height: 250px;
+            margin-left: 10px;
+        }
+    }
+}
